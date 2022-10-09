@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <img src="" alt="">
+        <img :src="$withBase('/img/logo.png')" alt="">
         <div class="right">
             <div class="right-components">
                 <div class="nav" v-for="item in $site.themeConfig.nav" >
@@ -27,9 +27,19 @@
     .header{
         padding: 0 24px;
         height: 64px;
+        min-height: 64px;
         display: flex;
+        align-items: center;
         justify-content: space-between;
         box-shadow: 0 1px 0 0 rgb(0 0 0 / 6%), 0 4px 4px 0 rgb(0 0 0 / 2%);
+        position: fixed;
+        z-index: 999;
+        background-color: #fff;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    img {
+        height: 2.3rem;
     }
     .right{
         height: 100%;
